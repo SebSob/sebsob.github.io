@@ -1,4 +1,4 @@
-# 'Aneom News' by Sebastien Albert
+# 'Adneom News' by Sebastien Albert
 
 Result: http://adneom-news.sebsob.be/
 
