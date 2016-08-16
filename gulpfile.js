@@ -33,7 +33,7 @@ gulp.task('styles', function(){
 	.pipe(gulp.dest(destPaths.css))
 	.pipe(livereload())
 	.on('end', function(){
-		gulpUtil.log(gulpUtil.colors.green('Styles task finished :)'))
+		gulpUtil.log(gulpUtil.colors.green('Styles task finished.'))
 	});
 });
 
@@ -50,16 +50,20 @@ gulp.task('scripts', function(){
 	.pipe(gulp.dest(destPaths.js))
 	.pipe(livereload())
 	.on('end', function(){
-		gulpUtil.log(gulpUtil.colors.green('Script task finished :)'))
+		gulpUtil.log(gulpUtil.colors.green('Script task finished.'))
 	});
-})
+});
 
 gulp.task('watch',function(){
-
 	cache.clearAll();
-
 	livereload.listen();
 
 	gulp.watch(srcPaths.sass+'/*.scss', ['styles']);
 	gulp.watch(srcPaths.js+'**/*.js', ['scripts']);
-})
+
+	return gulpUtil.log(gulpUtil.colors.green(srcPaths.sass + ' and ' + srcPaths.js + ' folders are being watched... Enjoy developing :)'));
+});
+
+
+// The default task (called when you run `gulp` from cli)
+gulp.task('default', ['styles', 'scripts', 'watch']);
