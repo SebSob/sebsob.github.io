@@ -1,0 +1,22 @@
+$icon-font-paths: '../fonts/';
+
+
+$transitionFunction: cubic-bezier(0.19, 1, 0.22, 1);
+$base-transition: all 0.35s $transitionFunction;
+
+
+$colors: (
+	primary	: #3db4e6,
+
+	purple	: #a666d2,
+	green	: #89d13d,
+	orange	: #e96e2b,
+	blue	: #3db4e6,
+	white	: #efefef,
+	black	: #110E0E,
+	red		: #bb6767
+);
+
+@function getColor($color) {
+    @return map-get($colors, $color);
+};

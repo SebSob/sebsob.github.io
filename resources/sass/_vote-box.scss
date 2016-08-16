@@ -1,0 +1,34 @@
+$b: 'vote-box';
+
+.#{$b} {
+
+	float: left;
+	padding: 3px;
+	text-align: center;
+	overflow: hidden;
+	
+	&--large {
+		font-size: 1.3em;
+	}
+
+	i {
+		cursor: pointer;
+		transition: $base-transition;
+
+		&:hover {
+			color: getColor(green);
+		}
+	}
+
+
+	&__pts {
+		cursor: default;
+		pointer-events: none;
+		font-size: 0.55em;
+	}
+
+	&__count {
+		font-size: 0.8em;
+		text-align: center;
+	}
+}

@@ -1,0 +1,24 @@
+.btn {
+	border-bottom: 3px solid #689f2e;
+    border-radius: 0px;
+    padding: 6px 18px;
+	color: #fff;
+	&:hover,
+	&:focus,
+	&:active {
+		color: #fff;
+	}
+}
+
+.btn--primary {
+	color: getColor(white);
+	background: getColor(green);
+	border: 1px solid getColor(green);
+
+	&:hover,
+	&:focus,
+	&:active {
+		background: #6ea435;
+		border: 1px solid #6ea435;
+	}
+}

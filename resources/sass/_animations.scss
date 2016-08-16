@@ -1,0 +1,38 @@
+.pop-anim {
+	animation: popAnimation .4s $transitionFunction;
+	animation-fill-mode: forwards;
+	will-change: transform;
+	font-smoothing: antialiased !important;
+}
+
+@keyframes popAnimation {
+	0% { transform: scale(1.1); }
+	50% { transform: scale(1.4) translateY(-15%)}
+	100% { transform: scale(1) translateY(0); }
+}
+
+.pop-anim--small {
+	animation: popAnimationSmall .5s $transitionFunction;
+	animation-fill-mode: forwards;
+	will-change: transform;
+	font-smoothing: antialiased !important;
+}
+
+@keyframes popAnimationSmall {
+	0% { transform: translateY(0);}
+	50% { transform: translateY(-8px)}
+	90% { transform: translateY(1px)}
+	100% { transform: stranslateY(0); }
+}
+
+
+.slideup-anim {
+	animation: slideUp 0.35s cubic-bezier(0.88, 0.24, 0.29, 0.57);
+	animation-fill-mode: forwards;
+	opacity: 0;
+}
+
+@keyframes slideUp {
+    from {transform: translateY(20%);}
+    to {transform: translateY(0); opacity: 1;}
+}
