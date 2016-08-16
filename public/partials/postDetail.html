@@ -1,0 +1,50 @@
+<div class="post-detail">
+	<a href="/news"><i class="fa fa-long-arrow-left" aria-hidden="true"></i> Back to all news</a>
+
+	<div class="post-detail__header">
+		<h2 class="post-detail__title">{{ post.title }}</h2>
+		<div class="post-detail__link">
+			<i class="fa fa-external-link" aria-hidden="true"></i>
+			<a href="{{ post.link }}">{{ post.link }}</a>
+		</div>
+		
+	</div>
+	<div class="post-detail__content">
+		<div class="box">
+			<h4>Comments</h4>
+			<div ng-show="post.comments.length == 0">This post has no comments yet.</div>
+			<ul class="list-unstyled comments-list">
+				<li class="comments-list__item comment-item" ng-repeat='comment in post.comments'> 
+					<div class="vote-box" ng-click="upvoteComment(comment)">
+						<i class="fa fa-arrow-up" aria-hidden="true"></i>
+						<div class="vote-box__count">{{ comment.upvotes }}</div>
+					</div>
+					<div class="comment-item__inner">
+
+						<div class="comment-item__author"><i class="fa fa-user comment-item__author-icon" aria-hidden="true"></i> {{ comment.author }}</div>
+						<div class="comment-item__body">{{ comment.body }}</div>
+					</div>	
+				</li>
+			</ul>
+		</div>
+
+		<div class="leave-comment">
+			<form>
+			<h3>Leave a comment</h3>
+			<div class="row">
+				<div class="col-sm-6">
+					<div class="form-group">
+						<input type="text" class="form-control" id="newCommentAuthor" ng-model="newComment.author" placeholder="Your name..." required>
+					</div>
+					<div class="form-group">
+						<textarea class="form-control" ng-model="newComment.body" id="newCommentBody" placeholder="Comment..." required></textarea>
+					</div>
+				</div>
+			</div>
+			<button type="submit" class="btn btn--primary" ng-click="submitComment()">Submit</button>
+			</form>
+		</div>
+	</div>
+</div>
+
+

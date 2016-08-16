@@ -1,0 +1,27 @@
+<div class="row">
+	<div class="col-xs-12 col-sm-8 col-sm-push-2 col-md-6 col-md-push-3">
+		<input type="text" class="form-control search-input" ng-model="searchText" placeholder="Search posts...">
+	</div>
+</div>
+<div class="row">
+	<div class="col-sm-12">
+		<div ng-show="isLoading">
+			<div class="spinner"></div>
+			<div class="text-center">Loading...</div>
+		</div>
+		<ul class="posts-list list-unstyled" ng-hide="isLoading">
+			<li class="posts-list__item post-item slideup-anim" ng-show="post.title" ng-repeat="post in posts | filter:searchText | orderBy: '-upvotes'">
+				<div class="vote-box vote-box--large" ng-click="upvotePost($event, post)">
+					<i title="Upvote this news!" class="fa fa-arrow-up" aria-hidden="true"></i>
+					<div class="vote-box__count">{{ post.upvotes }}</div>
+					<!--<div class="text-center small vote-box__pts">PTS</div>-->
+				</div>
+				<div class="post-item__inner">
+					<h3 class="post-item__title"><a href="{{ post.link }}" title="{{ post.link }}" target="_blank"> {{ post.title }} </a></h3>
+					<a class="post-item__link" href="/news/{{ post._id }}"><i class="fa fa-comments" aria-hidden="true"></i> {{ post.comments.length }} comments</a>
+				</div>
+			</li>
+		</ul>
+		
+	</div>
+</div>

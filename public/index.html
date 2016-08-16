@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Adneom News</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,maximum-scale=1">
+	<link rel="shortcut icon" href="http://www.adneom.com/www/public/images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon-precomposed" href="http://www.adneom.com/www/public/images/apple-touch-icon.png" />
+	<base href="/">
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/main.css">
+	<script src="http://localhost:35729/livereload.js?snipver=1"></script>
+</head>
+<body ng-app="app">
+	<header>
+		<div class="container">
+			<h2 class="text-center">Adneom News</h2>
+		</div>
+	</header>
+	<nav role="navigation" set-class-when-at-top="fixed">
+		<div class="container">
+			<ul class="list-inline">
+				<li><a href="/news" ng-class="{active: $route.current.activetab == 'news'}"><i class="fa fa-list" aria-hidden="true"></i> News</a></li>
+				<li><a href="/create" ng-class="{active: $route.current.activetab == 'create'}"><i class="fa fa-plus" aria-hidden="true"></i> Create</a></li>
+			</ul>
+		</div>
+	</nav>
+	<div class="container" ng-controller="MainController">
+		<ng-view></ng-view>
+	</div>
+
+	<script src="js/main.js"></script>
+</body>
+</html>

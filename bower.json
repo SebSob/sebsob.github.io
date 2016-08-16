@@ -1,0 +1,27 @@
+{
+  "name": "adneom-news",
+  "authors": [
+    "sebastienalbert sebastienalbert977@hotmail.com"
+  ],
+  "description": "Reddit-like adneom news site",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "^3.3.7"
+  },
+  "devDependencies": {
+    "font-awesome": "fontawesome#^4.6.3",
+    "angular": "1.5.8",
+    "angular-route": "^1.5.8"
+  }
+}
