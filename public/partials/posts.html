@@ -7,7 +7,7 @@
 	<div class="col-sm-12">
 		<div ng-show="isLoading">
 			<div class="spinner"></div>
-			<div class="text-center">Loading...</div>
+			<div class="text-center">Loading newsfeed, please wait...</div>
 		</div>
 		<ul class="posts-list list-unstyled" ng-hide="isLoading">
 			<li class="posts-list__item post-item slideup-anim" ng-show="post.title" ng-repeat="post in posts | filter:searchText | orderBy: '-upvotes'">

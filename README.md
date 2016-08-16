@@ -1,5 +1,7 @@
 # 'Aneom News' by Sebastien Albert
 
+Result: http://adneom-news.sebsob.be/
+
 ### Development instructions
 
 After you have cloned/downloaded this repo you only have to do a few things in order to start developing:
@@ -18,8 +20,8 @@ $ bower install
 This will install the web dependencies and place them in the resources folder `/resources/bower_components/`.
 
 The `/resources/` folder should have 3 folders:
-* `/resources/sass/` : this is where are of the SASS (.scss) files are located
-* `/resources/js/` : this is where are of JavaScript (.js) files are located
+* `/resources/sass/` : this is where all of the SASS (.scss) files are located
+* `/resources/js/` : this is where all of the JavaScript (.js) files are located
 * `/resources/bower_components/` : this is where all the external libraries are located (AngularJS, Bootstrap, jQuery,...)
 
 
